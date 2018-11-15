@@ -9,3 +9,5 @@ This is a repository of instructions for setting up custom domains using either 
 - [ ] CloudFlare
 - [ ] DNSimple
 - [ ] Google Cloud
+- [ ] NameCheap
+- [ ] ?
