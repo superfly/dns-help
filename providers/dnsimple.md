@@ -1,0 +1,1 @@
+# Custom Domain Setup for DNSimple
