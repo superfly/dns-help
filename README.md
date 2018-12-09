@@ -12,6 +12,7 @@ This is a repository of instructions for setting up custom domains using either 
 - [ ] GoDaddy
 - [ ] Google Cloud
 - [ ] Hover
+- [x] Name
 - [ ] NameCheap
 - [ ] Netlify
 
