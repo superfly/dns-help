@@ -7,21 +7,25 @@ Do you own a domain? Do you want your Glitch project to be accessible simply by 
 We'd love to know which services people are using to host their DNS records. Add the service that you're using to the list below, and if it's already there, copy and paste a 👍 next to it!
 
 - [AWS Route 53](providers/aws-route-53.md)  👍
-- [ ] CloudFlare 👍
-- [ ] DNSimple
-- [ ] DNSMadeEasy
-- [ ] Freenom 👍👍👍
-- [ ] GoDaddy
-- [ ] Google Cloud
-- [ ] Hover
-- [ ] NameCheap 👍👍
-- [ ] Netlify 👍👍
-- [ ] Glitch
-- [ ] NS1
-- [ ] Digital Ocean 👍
-- [ ] Name.com
+- [Cloudflare](providers/cloudflare.md) 👍
+- [DNSimple](dnsimple.md)
+- [DNSMadeEasy](dnsmadeeasy.md)
+- [Freenom](freenom.md) 👍👍👍
+- [GoDaddy](godaddy.md)
+- [Google Cloud](google-cloud.md)
+- [Hover](hover.md)
+- [NameCheap](namecheap.md) 👍👍
+- [Netlify](netlify.md) 👍👍
+- [NS1](ns1.md)
+- [Digital Ocean](digital-ocean.md) 👍
+- [Name.com](name.md)
+- [Enom](enom.md)
+- [DreamHost](dreamhost.md)
+- [iwantmyname](iwantmyname.md)
+- [Gandi](gandi.md)
+- [Linode](linode.md)
 
-Want to provide instructions on how put a CNAME-equivalent record at your domain Apex? Add a document to this project, toss up some instructions, then set back and steep in the glory. The more screenshots and links to original sources of information, the hotter the glory to steep in.
+Want to provide instructions on how put a CNAME-equivalent record at your domain apex? Toss up some instructions, then sit back and steep in the glory. The more screenshots and links to original sources of information, the hotter the glory to steep in.
 
 
 # Using a Custom Domain
@@ -30,7 +34,7 @@ Hereafter, when we want to use an example domain, we'll just say "your-applicati
 
 ## High Level Overview
 
-To use your own domain, here are three high level tidbits of information that you should have in mind:.
+To use your own domain, here are three high level tidbits of information that you should have in mind:
 
 First, if you want to use your bare domain (your-application.com) vs a subdomain (www.your-application.com), you may likely have some extra hoops to jump through at your DNS provider.
 
