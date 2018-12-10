@@ -19,6 +19,7 @@ We'd love to know which services people are using to host their DNS records. Add
 - [ ] Glitch
 - [ ] NS1
 - [ ] Digital Ocean 👍
+- [ ] Name.com
 
 Want to provide instructions on how put a CNAME-equivalent record at your domain Apex? Add a document to this project, toss up some instructions, then set back and steep in the glory. The more screenshots and links to original sources of information, the hotter the glory to steep in.
 
