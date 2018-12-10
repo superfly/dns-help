@@ -1,26 +1,59 @@
-# DNS Docs for Custom Domains
+# Using Custom Domains with your Glitch Project
 
-This is a repository of instructions for setting up custom domains using either CNAME or ALIAS records for the most common providers.
+Do you own a domain? Do you want your Glitch project to be accessible simply by using your domain name? You've come to the right place!
 
-## Help wanted! Per provider instructions
-(Add yours to the list, if it's already there just put a 👍or something on the same line
 
-- [ ] AWS Route 53
-- [ ] CloudFlare
+# DNS Provider Instructions
+We'd love to know which services people are using to host their DNS records. Add the service that you're using to the list below, and if it's already there, copy and paste a 👍 next to it!
+
+- [AWS Route 53](providers/aws-route-53.md)  👍
+- [ ] CloudFlare 👍
 - [ ] DNSimple
-- [ ] Freenom
+- [ ] DNSMadeEasy
+- [ ] Freenom 👍👍👍
 - [ ] GoDaddy
 - [ ] Google Cloud
 - [ ] Hover
-- [ ] NameCheap
-- [ ] Netlify
+- [ ] NameCheap 👍👍
+- [ ] Netlify 👍👍
+- [ ] Glitch
+- [ ] NS1
+- [ ] Digital Ocean 👍
 
-## Now what?
-* Screenshots + CNAME setup instructions for each provider, links to their docs, etc.
+Want to provide instructions on how put a CNAME-equivalent record at your domain Apex? Add a document to this project, toss up some instructions, then set back and steep in the glory. The more screenshots and links to original sources of information, the hotter the glory to steep in.
 
-## Generic instructions
 
-* Users need to know if they're using a subdomain (wat.example.com) or an apex domain (example.com)
+# Using a Custom Domain
+
+Hereafter, when we want to use an example domain, we'll just say "your-application.com" and then you can mentally substitute that for your _real_ domain, which we all know is hamsters-with-flamethrowers.com.
+
+## High Level Overview
+
+To use your own domain, here are three high level tidbits of information that you should have in mind:.
+
+First, if you want to use your bare domain (your-application.com) vs a subdomain (www.your-application.com), you may likely have some extra hoops to jump through at your DNS provider.
+
+Second, you'll be creating a CNAME or CNAME-equivalent DNS resource record to send DNS query traffic bound for your domain to the domain that Glitch uses to accept your HTTP traffic. Currently that's shw.io.
+
+Third, after your users' DNS query resolves properly, Glitch then recieves your users' HTTP traffic and serves your application up on your custome domain, rather than on the glitch.com domain.
+
+## Using a Sub-Domain, e.g. www.your-application.com
+
+If you're using a subdomain, such as www.your-application.com, the instructions are simple:
+
+1. Log in to the service where your DNS records are hosted.
+2. Add a `CNAME` record for www.your-application.com that points to the shw.io domain that's provisioned for your application. For example, `something-random.show.io`.
+
+## Using Your Bare Domain, e.g. your-application.com
+
+If you want to use your bare domain, also known as an apex domain, you may have one or two extra things to do. It depends on what service provider hosts your DNS records. We have specific instructions for many DNS providers below. If yours isn't listed, tell us about it! [Tweet us](https://twitter.com/flydotio), [email us](mailto:support@fly.io), [ask us in real time on Gitter](https://gitter.im/superfly/fly), or join and edit this document on Glitch.
+
+Ultimately, the trouble with using a bare domain is 
+
+1. You need to cause your-application.com to resolve to another human readable name, like random-domain.shw.io. In DNS terms, that's a CNAME record. Except...
+2. CNAME records can't exist on your Apex domain. Why? [That question has quite the answer](https://serverfault.com/questions/613829/why-cant-a-cname-record-be-used-at-the-apex-aka-root-of-a-domain). The short answer is: Because the RFC says so.
+
+In response to apex domains not technically being able to resolve to another human readable name (which in turn would eventually resolve to an IP address), DNS providers have created a number of non-standard, alternative record types that help preserve RFC compliance (more or less), and yet offer the functionality that application developers are looking for.
 
 1. If a subdomain (`wat.example.com`)
   1. Create a CNAME record
@@ -31,7 +64,5 @@ This is a repository of instructions for setting up custom domains using either 
   2. Leave name blank (or maybe enter `@` depending on DNS provider)
   3. Enter target domain in the value field (`something-random.shw.io`) (sometimes this needs a trailing `.`)
 
-### Troubleshooting
-Use a DNS propagation checker to make sure the DNS entry is configured properly: https://www.whatsmydns.net/
-
-You can enter both the custom domain and the target domain in that tool to see if the results come up the same.
+# Troubleshooting
+There are a lot of possibilities when truobleshootig DNS issues. We've written a separate troubleshooting document to help you out. [Check it out here](./troubleshooting.md) and let us know if it's not helping your specific situation.

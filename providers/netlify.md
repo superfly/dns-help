@@ -14,3 +14,12 @@
 1.  Goto Domains
 2.  Scroll down
 3.  Click "Add new record"
+
+
+# Netlify
+
+Netlify ofers the option to manage your domains' DNSs. You just need to point you domain name to their DNS servers from whichever registrar you bought your tomain from (you can also [buy a domain name directly from Netlify](https://www.netlify.com/blog/2018/06/19/buy-and-secure-a-custom-domain-through-netlify/).
+
+They do a great job of offering an excellent and full-featured DNS service, and all of that for free!
+
+https://www.netlify.com/docs/dns/
