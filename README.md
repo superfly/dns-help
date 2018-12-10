@@ -65,4 +65,4 @@ In response to apex domains not technically being able to use `CNAME` records to
 When you create the `CNAME`-like record that your DNS provider supports at the apex of your domain, you want to point the record to the shw.io domain that your application has been assigned. For example: `random-domain.shw.io`.
 
 # Troubleshooting
-There are a lot of possibilities when truobleshootig DNS issues. We've written a separate troubleshooting document to help you out. [Check it out here](./troubleshooting.md), but do let us know if you're stuck!
+There are a lot of possibilities when troubleshooting DNS issues. We've written a separate troubleshooting document to help you out. [Check out our troubleshooting guidance here](./troubleshooting.md), but do let us know if you're stuck!
