@@ -1,11 +1,11 @@
-# <Provider Name> at a glance
+# `Provider Name` at a glance
 
  |   | Does | Doesn't |
  | :---: | :---: | :---: |
- | Apex `CNAME` equivalent | ✔ | ⃠⃠⃠🚫 |
- | HTTP redirect | ✔ | 🚫 |
- | HTTPS redirect | ✔ | 🚫 |
- | API Access | ✔ | 🚫 |
+ | Apex `CNAME` equivalent | :heavy_check_mark: | :no_entry_sign: |
+ | HTTP redirect | :heavy_check_mark: | :no_entry_sign: |
+ | HTTPS redirect | :heavy_check_mark: | :no_entry_sign: |
+ | API Access | :heavy_check_mark:| :no_entry_sign: |
 
 # Using the Apex Domain
 
