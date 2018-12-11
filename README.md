@@ -25,7 +25,7 @@ We'd love to know which services people are using to host their DNS records. If 
 - [Netlify](netlify.md) 👍👍
 - [NS1](ns1.md)
 
-Want to provide instructions on how put a CNAME-equivalent record at a domain apex? Add 'em here, then sit back and steep in the glory. The more screenshots and links to original sources of information, the hotter the glory to steep in.
+Want to provide instructions on how put a CNAME-equivalent record at a domain apex? [Check out our provider template](providers/template-for-providers.md) and add some instructions, then sit back and steep in the glory. The more screenshots and links to original sources of information, the hotter the glory to steep in.
 
 
 # Using a Custom Domain
