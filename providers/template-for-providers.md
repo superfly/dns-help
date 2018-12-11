@@ -10,9 +10,9 @@
 # Using the Apex Domain
 
 You'll want to include:
-- If the Apex domain supports a `CNAME`-equivalent resource record at all.
-- If there multiple options for using the apex domain, such as an `ALIAS` record, but also a HTTP redirection option as well. 
-- Any pertinent characteristics of the methods involved in using the Apex domain.
+- If the Apex domain supports a `CNAME`-equivalent resource record.
+- If there are multiple options for using the apex domain, such as an `ALIAS` record in addition to an HTTP redirection option, etc.
+- Any pertinent characteristics of the methods involved in using the apex domain.
 - Links to source documentation for the provider.
 - Step by step instructions on how to create the record in the GUI. Screenshots are good.
 - If the record can be created via an API. Examples and links to documentation would be greeeaaattt.
