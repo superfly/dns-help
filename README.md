@@ -6,10 +6,19 @@ Do you own a domain? Do you want your Glitch project to be accessible simply by 
 # DNS Provider Instructions
 We'd love to know which services people are using to host their DNS records. If you don't see your DNS provider below, [submit a PR](https://github.com/superfly/dns-help) to add your preferred DNS provider to the list! If it's already there, show it some love by pasting a 👍 next to it! If the following instructions don't seem to be working for you or you have other questions, let us know: [Tweet at us](https://twitter.com/flydotio), [email us](mailto:support@fly.io), or [ask us in real time on Gitter](https://gitter.im/superfly/fly).
 
+At Fly, we tend to divide DNS providers into two categories: Preferred and Unsupported. Preferred DNS providers offer a `CNAME`-like resource record at your zone's apex. In other words, you can forward DNS queries for your-domain.com to another DNS name, like this.other-domain.com. Unsupported DNS providers don't offer that option, or the option isn't easy to implement and requires the use of other service and some coding to make work.
+
+We're still working on making this a complete list, but here's how the providers list stands now:
+
+## Preferred:
+- [DNSimple](dnsimple.md)
+
+## Unsupported:
 - [AWS Route 53](providers/aws-route-53.md)  👍
+
+##Still Being Investigated:
 - [Cloudflare](providers/cloudflare.md) 👍
 - [Digital Ocean](digital-ocean.md) 👍
-- [DNSimple](dnsimple.md)
 - [DNSMadeEasy](dnsmadeeasy.md)
 - [DreamHost](dreamhost.md)
 - [Enom](enom.md)
@@ -25,8 +34,9 @@ We'd love to know which services people are using to host their DNS records. If 
 - [Netlify](netlify.md) 👍👍
 - [NS1](ns1.md)
 
-Want to provide instructions on how put a CNAME-equivalent record at a domain apex? [Check out our provider template](providers/template-for-providers.md) and add some instructions, then sit back and steep in the glory. The more screenshots and links to original sources of information, the hotter the glory to steep in.
+## DNS Documentation Help
 
+Want to provide instructions on how put a CNAME-equivalent record at a domain apex? [Check out our provider template](providers/template-for-providers.md) and add some instructions, then sit back and steep in the glory. The more screenshots and links to original sources of information, the hotter the glory to steep in.
 
 # Using a Custom Domain
 
