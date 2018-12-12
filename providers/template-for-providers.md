@@ -3,8 +3,6 @@
  |   | Does | Doesn't |
  | :---: | :---: | :---: |
  | Apex `CNAME` equivalent | :heavy_check_mark: | :no_entry_sign: |
- | HTTP redirect | :heavy_check_mark: | :no_entry_sign: |
- | HTTPS redirect | :heavy_check_mark: | :no_entry_sign: |
  | API Access | :heavy_check_mark:| :no_entry_sign: |
 
 # Using the Apex Domain
