@@ -1,7 +1,8 @@
-# Using Custom Domains with your Glitch Project
+# Using Your Own Domain Name with Fly
 
-Do you own a domain? Do you want your Glitch project to be accessible simply by using your domain name? You've come to the right place!
+When you create an application at Fly, you get a randomized DNS name to access it with. E.g. `vapid-hedgehog-4710.edgeapp.net`. Commonly, you wouldn't want your application's users to use that name. Instead, if you own your own domain name, your users can use that to access your Fly Edge App. E.g. `your-application.com` being the URL that your customers use to access the application at `vapid-hedgehog-4710.edgeapp.net`.
 
+The following instructions help you set up all the magic.
 
 # DNS Provider Instructions
 We'd love to know which services people are using to host their DNS records. If you don't see your DNS provider below, [submit a PR](https://github.com/superfly/dns-help) to add your preferred DNS provider to the list! If it's already there, show it some love by pasting a 👍 next to it! If the following instructions don't seem to be working for you or you have other questions, let us know: [Tweet at us](https://twitter.com/flydotio), [email us](mailto:support@fly.io), or [ask us in real time on Gitter](https://gitter.im/superfly/fly).
