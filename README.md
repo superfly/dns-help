@@ -14,7 +14,7 @@ At Fly, we tend to divide DNS providers into two categories: **Preferred** and *
 We're still working on making this a complete list, but here's the current providers list:
 
 ## Preferred:
-- [DNSimple](dnsimple.md)
+- [DNSimple](providers/dnsimple.md)
 
 ## Unsupported:
 - [AWS Route 53](providers/aws-route-53.md)  👍
