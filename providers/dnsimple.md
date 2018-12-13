@@ -1,3 +1,7 @@
+---
+nameserver-pattern: ns[0-5].dnsimple.com
+---
+
 # `Provider Name` at a glance
 
  |   | Does | Doesn't |
