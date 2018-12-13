@@ -13,7 +13,6 @@ You'll want to include:
 - Any pertinent characteristics of the methods involved in using the apex domain.
 - Links to source documentation for the provider.
 - Step by step instructions on how to create the record in the GUI. Screenshots are good.
-- If the record can be created via an API. Examples and links to documentation would be greeeaaattt.
 
 # Using a Subdomain
 
