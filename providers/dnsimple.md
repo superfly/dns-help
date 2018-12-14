@@ -39,6 +39,4 @@ However, you know your needs better than we do. If you find that the `URL` recor
 
 # Using a Subdomain
 
-If your application lives on a subdomain, you can simply use a `CNAME` record at DNSimple.
-
-1. 
+If your application lives on a subdomain, you can simply [use a `CNAME` record at DNSimple](https://support.dnsimple.com/articles/manage-cname-record/).
