@@ -1,3 +1,7 @@
+---
+nameserver-pattern: *awsdns*
+---
+
 # `Provider Name` at a glance
 
  |   | Does | Doesn't |
