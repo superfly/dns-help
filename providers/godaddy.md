@@ -7,6 +7,8 @@
 
 GoDaddy does not provide a `CNAME`-equivalent resource record for apex domains. However, GoDaddy does provide free HTTP forwarding or proxying for your domain and its subdomains. Before you proceed, you'll want to assess some downsides.
 
+If the downsides mentioned below are a bit too much for you, we suggest taking a look at our [list of preferred DNS hosts](https://github.com/superfly/dns-help#preferred).
+
 ##  GoDaddy Forwarding
 
 When forwarding a domain that has its DNS zone hosted at GoDaddy, you'll want to consider the following:
@@ -43,7 +45,7 @@ These are the steps to use GoDaddy forwarding or forwarding with masking for you
   * Save your settings!
 ![GoDaddy - Modify Forwarding Options](./screenshots/godaddy/godaddy-domain-forward-options.png "GoDaddy - Modify Forwarding Options")
 
-You should be all set! It may take a few minutes, but your domain should either redirect to your Fly Edge App URL or proxy your Fly Edge App within a few minutes.
+You should be all set! It may take a few minutes, but depending on the forward option you chose, your domain should either redirect to your Fly Edge App URL or proxy your Fly Edge App within a few minutes.
 
 # Using a Subdomain
 
@@ -53,17 +55,17 @@ If you want your application to be a subdomain on your main domain, you'll want 
 
 ![GoDaddy - Manage DNS Records for your Domain](./screenshots/godaddy/godaddy-select-dns.png "GoDaddy - Manage DNS Records for your Domain")
 
-2. On the DNS Management page, look for the "Forwarding" section. Click "Add" next to the "Domain" sub-section:
+2. On the DNS Management page, look for the "Records" section and click the "Add" button:
 
-![GoDaddy - Add DNS Records for your Domain](./screenshots/godaddy/godaddy-add-dns-record.png "GoDaddy - Add DNS Records for your Domain" | width=500)
+![GoDaddy - Add DNS Records for your Domain](./screenshots/godaddy/godaddy-add-dns-record.png "GoDaddy - Add DNS Records for your Domain")
 
-3. From the drop down menu, choose to add a `CNAME` record
+3. From the "Type" drop down menu, choose to add a `CNAME` record
 
 ![GoDaddy - Add DNS Records for your Domain](./screenshots/godaddy/godaddy-add-cname.png "GoDaddy - Add DNS Records for your Domain")
 
 4. Provide the information to create your `CNAME` record.
   * The "Host" would be the subdomain that you want your users to access your application with. For example, `app` would mean your users access your site with the URL `app.your-application.com`.
-  * The "Points to" section would be the where your application resides at Fly. For example, `vapid-hedgehog-4710.edgeapp.net`.
+  * The "Points to" section would be where your application resides at Fly. For example, `vapid-hedgehog-4710.edgeapp.net`.
 
 ![GoDaddy - Provide CNAME information for your subdomain](./screenshots/godaddy/godaddy-cname-info.png "GoDaddy - Provide CNAME information for your subdomain")
 
