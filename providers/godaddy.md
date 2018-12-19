@@ -65,6 +65,6 @@ If your application should be a subdomain on your main domain, you'll want to cr
   * The "Host" would be the subdomain that you want your users to access your application with. For example, `app` would mean your users access your site with the URL `app.your-application.com`.
   * The "Points to" section would be the where your application resides at Fly. For example, `vapid-hedgehog-4710.edgeapp.net`.
 
-![GoDaddy - Provide CNAME information for your subdomain](./screenshots/godaddy/godaddy-add-cname.png "GoDaddy - Provide CNAME information for your subdomain")
+![GoDaddy - Provide CNAME information for your subdomain](./screenshots/godaddy/godaddy-cname-info.png "GoDaddy - Provide CNAME information for your subdomain")
 
 Once you save the `CNAME` information, your users will be able to access your application at Fly.io using the subdomain you just set up. Your users will only see your subdomain in their browser, and will not see your Fly.io URL.
