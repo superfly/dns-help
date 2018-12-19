@@ -1,4 +1,4 @@
-# `Provider Name` at a glance
+# GoDaddy at a glance
 
  |   | Does | Doesn't |
  | :---: | :---: | :---: |
@@ -12,15 +12,15 @@ GoDaddy does not provide a `CNAME`-equivalent resource record for apex domains. 
 When forwarding a domain that has its DNS zone hosted at GoDaddy, you'll want to consider the following:
 
 * Your users can only click or type your domain URL if it begins with `http://`. If your domain is `your-application.com`, you'll want to give out your URL as `http://your-application.com` rather than `https://your-application.com`. GoDaddy's forwarding servers do not listen for HTTPS requests. However, the URL that you forward to can be `https://`, for example your Fly Edge App's URL.
-* Your users will not see your domain in their URL bar. They will ultimately see your Fly.io Edge Application's URL. For example, `https://vapid-hedgehog-4710.edgeapp.net`. This may be an inconsistent and confusing experience.
+* Your users will not see your domain in their browser's URL bar. They will ultimately see your Fly.io Edge Application's URL. For example, `https://vapid-hedgehog-4710.edgeapp.net`. This may be an inconsistent and confusing experience.
 
-## GoDaddy "Forwarding with Masking"
+## GoDaddy "Forward with Masking"
 
-When using the "Forwarding with Masking" option for a domain that has its DNS zone hosted at GoDaddy, you're essentially using a proxy server to pull content up to users. There are some downsides to consider:
+When using the "Forward with Masking" option for a domain that has its DNS zone hosted at GoDaddy, you're essentially using a GoDaddy proxy server to pull content up to users. This is not a DNS based solution, in spite of the option for forwarding being accessed through the DNS section of GoDaddy's UI. There are some downsides to consider with the "Forward with Masking" option:
 
 * You're proxying a proxy of your origin. That is to say, GoDaddy will be proxying your Fly.io Edge Application which is itself a proxy of your origin site. HTTP Headers and HTML title, description, and keywords may be inconsistent.
-* The URL that your users access will be delivered over HTTP since GoDaddy doesn't listen for HTTPS requests. This means that the traffic from GoDaddy to your users will be unsecure. Note that the traffic from GoDaddy to your Fly.io Edge Application (e.g. `https://vapid-hedgehog-4710.edgeapp.net`) _will_ be, however the chain of security has been broken.
-* The use of GoDaddy's "Forwarding with Masking" feature adds another layer of latency to your application. GoDaddy isn't selling a professional proxy service as much as it's offering a free convenience. As such, performance and reliability may be an unknown variable.
+* The URL that your users access will be delivered over HTTP since GoDaddy doesn't listen for HTTPS requests. This means that the traffic from GoDaddy to your users will be unsecure. Note that the traffic from GoDaddy to your Fly.io Edge Application (e.g. `https://vapid-hedgehog-4710.edgeapp.net`) _will_ be, however the chain of security between users and the application has been broken.
+* The use of GoDaddy's "Forward with Masking" feature adds another layer of latency to your application. GoDaddy isn't selling a professional proxy service as much as it's offering a free convenience. As such, performance and reliability may be an unknown variable.
 
 # Using the Apex Domain
 
@@ -47,7 +47,7 @@ You should be all set! It may take a few minutes, but your domain should either 
 
 # Using a Subdomain
 
-If your application should be a subdomain on your main domain, you'll want to create a new `CNAME` record within GoDaddy's DNS management control panel.
+If you want your application to be a subdomain on your main domain, you'll want to create a new `CNAME` record within GoDaddy's DNS management control panel.
 
 1. Log in to your GoDaddy account and look for the domain that you want to use with a Fly Edge Application. Once you've found it, click the "DNS" button:
 
@@ -55,7 +55,7 @@ If your application should be a subdomain on your main domain, you'll want to cr
 
 2. On the DNS Management page, look for the "Forwarding" section. Click "Add" next to the "Domain" sub-section:
 
-![GoDaddy - Add DNS Records for your Domain](./screenshots/godaddy/godaddy-add-dns-record.png "GoDaddy - Add DNS Records for your Domain")
+![GoDaddy - Add DNS Records for your Domain](./screenshots/godaddy/godaddy-add-dns-record.png "GoDaddy - Add DNS Records for your Domain" | width=500)
 
 3. From the drop down menu, choose to add a `CNAME` record
 
