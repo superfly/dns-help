@@ -15,13 +15,13 @@ We're still working on making this a complete list, but here's the current provi
 
 ## Preferred:
 - [DNSimple](providers/dnsimple.md)
+- [Cloudflare](providers/cloudflare.md) 👍
 
 ## Unsupported:
 - [AWS Route 53](providers/aws-route-53.md)  👍
 - [GoDaddy](providers/godaddy.md)
 
 ## Still Being Investigated:
-- [Cloudflare](providers/cloudflare.md) 👍
 - [Digital Ocean](providers/digital-ocean.md) 👍
 - [DNSMadeEasy](providers/dnsmadeeasy.md)
 - [DreamHost](providers/dreamhost.md)

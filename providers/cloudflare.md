@@ -3,9 +3,9 @@
  |   | Does | Doesn't |
  | :---: | :---: | :---: |
  | Apex `CNAME` equivalent | :heavy_check_mark: | |
- | API Access | :heavy_check_mark:| :no_entry_sign: |
+ | API Access | :heavy_check_mark:| |
 
- CloudFlare allows you to create a `CNAME` record at the apex domain, however to maintain RFC compliance, Cloudflare performs what they call "[`CNAME` Flattening.](https://support.cloudflare.com/hc/en-us/articles/200169056-Understand-and-configure-CNAME-Flattening)". The net effect is that your users' DNS clients receive an IP address as if the apex domain's resource record was an `A` record, however behind the scences, Cloudflare is recursively resolving your `CNAME`.
+ CloudFlare allows you to create a `CNAME` record at the apex domain, however to maintain RFC compliance, Cloudflare performs what they call "[`CNAME` Flattening.](https://support.cloudflare.com/hc/en-us/articles/200169056-Understand-and-configure-CNAME-Flattening)". The net effect is that your users' DNS clients receive an IP address as if the apex domain's resource record was an `A` record, however behind the scenes, Cloudflare is recursively resolving your `CNAME`.
 
 # Using the Apex Domain
 
