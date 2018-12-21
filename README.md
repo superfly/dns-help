@@ -20,6 +20,7 @@ We're still working on making this a complete list, but here's the current provi
 ## Unsupported:
 - [AWS Route 53](providers/aws-route-53.md)  👍
 - [GoDaddy](providers/godaddy.md)
+- [NameCheap](providers/namecheap.md) 👍👍
 
 ## Still Being Investigated:
 - [Digital Ocean](providers/digital-ocean.md) 👍
@@ -33,7 +34,6 @@ We're still working on making this a complete list, but here's the current provi
 - [iwantmyname](providers/iwantmyname.md)
 - [Linode](providers/linode.md)
 - [Name.com](providers/name.md)
-- [NameCheap](providers/namecheap.md) 👍👍
 - [Netlify](providers/netlify.md) 👍👍
 - [NS1](providers/ns1.md)
 
