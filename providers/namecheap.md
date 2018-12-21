@@ -65,27 +65,20 @@ Your domain should now be usable with your Fly Edge App.
 
 If you want your application to be a subdomain on your main domain, you'll want to create a new `CNAME` record within Namecheap's DNS management dashboard.
 
-## 1. Log in to your Namecheap account and look for the domain that you want to use with a Fly Edge Application. Once you've found it, click the "Manage" button:
+### 1. Log in to Namecheap, search for the domain that you'd like to use with your Fly Edge App, and click "manage."
 
 ![Namecheap - Manage DNS Records for your Domain](./screenshots/namecheap/namecheap-manage-domain.png "Namecheap - Manage DNS Records for your Domain")
 
-## 2. Click "Advanced DNS"
+### 2. Click "Advanced DNS"
 
 ![Namecheap - Choose Advanced DNS](./screenshots/namecheap/namecheap-advanced-dns.png "Namecheap - Choose Advanced DNS")
 
 
-##  3. On the DNS Management page, look for the "Host Records" section and click the "Add New Record" button:
+###  3. Add a new resource record, choosing `CNAME` as the type:
 
-![Namecheap - Add DNS Records for your Domain](./screenshots/namecheap/namecheap-add-dns-record.png "Namecheap - Add DNS Records for your Domain")
-
-## 4. From the "Type" drop down menu, choose to add a `CNAME` record
-
-![Namecheap - Add DNS Records for your Domain](./screenshots/namecheap/namecheap-add-cname.png "Namecheap - Add DNS Records for your Domain")
-
-## 4. Provide the information to create your `CNAME` record.
-  * The "Host" would be the subdomain that you want your users to access your application with. For example, `app` would mean your users access your site with the URL `app.your-application.com`.
+  * The "Host" value would be the subdomain that you want your users to access your application with. For example, `app` would mean your users access your site with the URL `app.your-application.com`.
   * The "Points to" section would be where your application resides at Fly. For example, `vapid-hedgehog-4710.edgeapp.net`.
 
-![Namecheap - Provide CNAME information for your subdomain](./screenshots/namecheap/namecheap-cname-info.png "Namecheap - Provide CNAME information for your subdomain")
+![Namecheap - Add DNS Records for your Domain](./screenshots/namecheap/namecheap-add-cname-record.png "Namecheap - Add DNS Records for your Domain")
 
-Once you save the `CNAME` information, your users will be able to access your application at Fly.io using the subdomain you just set up. Your users will only see your subdomain in their browser, and will not see your Fly.io URL.
+Once you save the `CNAME` information, your users will be able to access your application at Fly.io using the subdomain you just set up. Your users will only see your subdomain URL in their browser, and will not see your Fly.io URL.
