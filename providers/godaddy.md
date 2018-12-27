@@ -18,11 +18,10 @@ When forwarding a domain that has its DNS zone hosted at GoDaddy, you'll want to
 
 ## GoDaddy "Forward with Masking"
 
-When using the "Forward with Masking" option for a domain that has its DNS zone hosted at GoDaddy, you're essentially using a GoDaddy proxy server to pull content up to users. This is not a DNS based solution, in spite of the option for forwarding being accessed through the DNS section of GoDaddy's UI. There are some downsides to consider with the "Forward with Masking" option:
+When using the "Forward with Masking" option for a domain that has its DNS zone hosted at GoDaddy, your Fly Edge App is loaded in an `iframe` element, retaining your apex domain in web browsers. However, that breaks responsive design, among other things. Only you can decide if iframe embedding is acceptable for your use case, however, we'd suggest not using the "Forward with Masking" option.
 
-* You're proxying a proxy of your origin. That is to say, GoDaddy will be proxying your Fly.io Edge Application which is itself a proxy of your origin site. HTTP Headers and HTML title, description, and keywords may be inconsistent.
+* You're adding another depdendency layer to the loading of your application.
 * The URL that your users access will be delivered over HTTP since GoDaddy doesn't listen for HTTPS requests. This means that the traffic from GoDaddy to your users will be unsecure. Note that the traffic from GoDaddy to your Fly.io Edge Application (e.g. `https://vapid-hedgehog-4710.edgeapp.net`) _will_ be, however the chain of security between users and the application has been broken.
-* The use of GoDaddy's "Forward with Masking" feature adds another layer of latency to your application. GoDaddy isn't selling a professional proxy service as much as it's offering a free convenience. As such, performance and reliability may be an unknown variable.
 
 # Using the Apex Domain
 
