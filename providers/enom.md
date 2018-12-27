@@ -27,11 +27,9 @@ At Enom, there are two free URL redirect options that you can utilize for your A
 
 ![Enom - Manage DNS Records for your Domain](./screenshots/enom/enom-basic-dns-records.png "Enom - Manage DNS Records for your Domain")
 
-2. Look for any pre-existing `A`,`AAAA`, `CNAME`, `URL Frame` or `URL Redirect` record with a "Host Name" value of `@` and delete it.
+2. Look for any pre-existing `A`,`AAAA`, `CNAME`, `URL Frame` or `URL Redirect` record with a "Host Name" value of `@` and delete it. Note that by default Enom will create a blank record for `@`. As long as there is no value in the "Address" field of an existing record for `@`, then you can continue.
 
 ![Enom - Manage DNS Records for your Domain](./screenshots/enom/enom-delete-old-apex-record.png "Enom - Manage DNS Records for your Domain")
-
-  Note that by default Enom will create a blank record for `@`. As long as there is no value in the "Address" field of an existing record for `@`, then you can continue.
 
 3. Begin editing the row that Enom creates by default for `@`: 
 
