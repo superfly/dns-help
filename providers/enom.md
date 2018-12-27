@@ -21,6 +21,8 @@ Enom does provide two types of URL redirect records for apex domains, which you 
 
 At Enom, there are two free URL redirect options that you can utilize for your apex domain: **URL redirects** and **URL frames**. A **URL redirect** causes an HTTP redirect response to be sent to your user's web browser. They are then sent to your Fly Edge App's URL which will be seen in the browser for the duration of the session with your Fly Edge App. A **URL Frame** record loads your fly edge app in an HTML `iframe` element, retaining your apex domain in web browsers. However, that breaks responsive design, among other things. Only you can decide if iframe embedding is acceptable for your use case, however, we'd suggest not using the URL Frame option.
 
+Also note that your users can only click or type your domain URL if it begins with `http://`. If your domain is `your-application.com`, you'll want to give out your URL as `http://your-application.com` rather than `https://your-application.com`. GoDaddy's forwarding servers do not listen for HTTPS requests. However, the URL that you forward to can be `https://`, for example your Fly Edge App's URL.
+
 ### Add a URL Redirect or URL Frame Record
 
 1. To redirect your users using a domain at Enom, log in to your Enom account and look for the domain that you want to use with a Fly Edge Application. If Enom is the service being used to host your DNS zone, you'll find the domain under the "DNS hosted" link: 
