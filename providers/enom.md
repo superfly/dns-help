@@ -15,11 +15,11 @@ While [Enom indicated in the past that they supported apex domain `CNAME` record
 >
 > * A CNAME must have no other records of other types (MX, A, etc). This is very important especially with the @ record. If you specify a CNAME record type for the @ hostname, then email will not route properly for this domain name.
 
-However, Enom does provide two types of URL redirect records for apex domains.
+Enom does provide two types of URL redirect records for apex domains, which you may be able to use if the drawbacks are acceptable to your scenario.
 
 # Using the Apex Domain
 
-At Enom, there are two free URL redirect options that you can utilize for your Apex Domain: **URL redirects** and **URL Frames**. A **URL redirect** causes an HTTP redirect response to be sent to your user's web browser. They are then sent to your Fly Edge App's URL which will be seen in the browser for the duration of the session with your Fly Edge App. A **URL Frame** record loads your fly edge app in an HTML `iframe` element, retaining your apex domain in web browsers. However, that breaks responsive design, among other things. Only you can decide if iframe embedding is acceptable for your use case, however, we'd suggest not using the URL Frame option.
+At Enom, there are two free URL redirect options that you can utilize for your apex domain: **URL redirects** and **URL frames**. A **URL redirect** causes an HTTP redirect response to be sent to your user's web browser. They are then sent to your Fly Edge App's URL which will be seen in the browser for the duration of the session with your Fly Edge App. A **URL Frame** record loads your fly edge app in an HTML `iframe` element, retaining your apex domain in web browsers. However, that breaks responsive design, among other things. Only you can decide if iframe embedding is acceptable for your use case, however, we'd suggest not using the URL Frame option.
 
 ### Add a URL Redirect or URL Frame Record
 
