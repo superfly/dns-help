@@ -5,11 +5,11 @@
  | Apex `CNAME` equivalent | :heavy_check_mark: | |
  | API Access | :heavy_check_mark:| |
 
-DNS Made Easy offers a `CNAME`-like record for apex domains called an `ANAME` record.
+DNS Made Easy offers a `CNAME`-like record for apex domains [called an `ANAME` record](https://dnsmadeeasy.com/services/anamerecords/).
 
 # Using the Apex Domain
 
-1. Log in to your DNS Made Easy account, view the domains that you use DNS Made Easy's Managed DNS with, and select the domain that you want to use with your Fly Edge App.
+1. Log in to your DNS Made Easy account, view the list of domains that DNS Made Easy manages for you, and select the domain that you want to use with your Fly Edge App.
 
 ![DNS Made Easy - Manage DNS Records for your Domain](./screenshots/dnsmadeeasy/dnsmadeeasy-managed-dns.png "DNS Made Easy - Manage DNS Records for your Domain")
 
@@ -21,7 +21,7 @@ DNS Made Easy offers a `CNAME`-like record for apex domains called an `ANAME` re
 
 - "Name" will be blank to use the apex domain.
 - "FQDN or IP" will be the URL of your Fly Edge App URL, _and must end with a period_. For example, `vapid-hedgehog-4710.edgeapp.net.`.
-- "TTL" can remain at the default.
+- "TTL" can remain at the default value.
 
 ![DNS Made Easy - Add an ANAME record](./screenshots/dnsmadeeasy/dnsmadeeasy-add-aname-record.png "DNS Made Easy - Add an ANAME record")
 
@@ -32,7 +32,7 @@ One you save the new `ANAME` record, your users will be able to access your Fly 
 
 If you want your application to be a subdomain on your main domain, you'll want to create a new `CNAME` record within DNS Made Easy's DNS management dashboard. You can follow step #1 and #2 above, except for step #2 you'll want to look for the area to add a `CNAME` record. Once you do, click to add one:
 
-![DNS Made Easy - Add a CNAME record.](./screenshots/dnsmadeeasy/dnsmadeeasy-add-aname-record.png "DNS Made Easy - Add a CNAME record.")
+![DNS Made Easy - Add a CNAME record.](./screenshots/dnsmadeeasy/dnsmadeeasy-add-cname.png "DNS Made Easy - Add a CNAME record.")
 
 You'll need to supply the following information:
 - Name: The name of the subdomain you want your users to access your Fly Edge App with. For example: "app" to use "app.your-application.com"
