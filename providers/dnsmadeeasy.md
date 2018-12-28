@@ -30,7 +30,7 @@ One you save the new `ANAME` record, your users will be able to access your Fly 
 
 # Using a Subdomain
 
-If you want your application to be a subdomain on your main domain, you'll want to create a new `CNAME` record within DNS Made Easy's DNS management dashboard. You can follow step #1 and #2 above, except for step #2 you'll want to look for the area to add a `CNAME` record. Once you do, click to add one:
+If you want your application to be a subdomain on your main domain, you'll want to create a new `CNAME` record within DNS Made Easy's DNS management dashboard. You can follow steps #1 and #2 above, but in step #2 you'll want to look for the area to add a `CNAME` record. Once you do, click to add one:
 
 ![DNS Made Easy - Add a CNAME record.](./screenshots/dnsmadeeasy/dnsmadeeasy-add-cname.png "DNS Made Easy - Add a CNAME record.")
 
