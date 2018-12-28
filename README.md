@@ -14,8 +14,9 @@ At Fly, we tend to divide DNS providers into two categories: **Preferred** and *
 We're still working on making this a complete list, but here's the current providers list:
 
 ## Preferred:
-- [DNSimple](providers/dnsimple.md)
 - [Cloudflare](providers/cloudflare.md) 👍
+- [DNSimple](providers/dnsimple.md)
+- [DNSMadeEasy](providers/dnsmadeeasy.md)
 
 ## Unsupported:
 - [AWS Route 53](providers/aws-route-53.md)  👍
@@ -25,7 +26,6 @@ We're still working on making this a complete list, but here's the current provi
 
 ## Still Being Investigated:
 - [Digital Ocean](providers/digital-ocean.md) 👍
-- [DNSMadeEasy](providers/dnsmadeeasy.md)
 - [DreamHost](providers/dreamhost.md)
 - [Freenom](providers/freenom.md) 👍👍👍
 - [Gandi](providers/gandi.md)
