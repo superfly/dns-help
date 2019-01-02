@@ -20,6 +20,7 @@ We're still working on making this a complete list, but here's the current provi
 
 ## Unsupported:
 - [AWS Route 53](providers/aws-route-53.md)  👍
+- [Google Domains](providers/google-domains.md)
 - [Enom](providers/enom.md)
 - [GoDaddy](providers/godaddy.md)
 - [NameCheap](providers/namecheap.md) 👍👍
@@ -30,7 +31,6 @@ We're still working on making this a complete list, but here's the current provi
 - [Freenom](providers/freenom.md) 👍👍👍
 - [Gandi](providers/gandi.md)
 - [Google Cloud Platform Cloud DNS](providers/google-cloud.md)
-- [Google Domains](providers/google-domains.md)
 - [Hover](providers/hover.md)
 - [iwantmyname](providers/iwantmyname.md)
 - [Linode](providers/linode.md)
