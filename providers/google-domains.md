@@ -22,17 +22,17 @@
  2. Scroll down to find the "Synthetic records" section. Create a new synthetic record using the following information:
 
   - Choose "Subdomain forward" from the drop down box.
-  - In the "Subdomain" input field, type the a single `@` symbol.
+  - In the "Subdomain" input field, type a single `@` symbol.
   - For the "Destination URL", put your Fly Edge App URL. E.g. `https://vapid-hedgehog-4710.edgeapp.net`
-  - Choose appropriate [redirect options](https://support.google.com/domains/answer/4522141#moreoptions) for your use case.
+  - Choose appropriate [redirect options](https://support.google.com/domains/answer/4522141#moreoptions) for your use case. Themost common option to choose is "Enable SSL"
 
 ![Google Domains - Create a Synthetic Record](./screenshots/google-domains/google-domains-create-synthetic-forwarding-record.png "Google Domains - Create a Synthetic Record")
 
-3. You may need to wait up to 24 hours for your certificate to be created, however many times it's just a matter of minutes:
+3. You may need to wait up to 24 hours for your certificate to be created, however it often only takes a few minutes:
 
 ![Google Domains - TLS certificate is being created](./screenshots/google-domains/google-domains-synthetic-forwarding-record-tls-warning.png "Google Domains - TLS certificate is being created")
 
-Your domain should now be forwarding both HTTP and HTTPS requests to your Fly Edge App!
+Assuming you chose "Enable SSL", your domain should now be forwarding both HTTP and HTTPS requests to your Fly Edge App!
 
 
 
