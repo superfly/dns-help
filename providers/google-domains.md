@@ -11,7 +11,7 @@
 
 # Using the Apex Domain
 
- Google Domains does not have an apex domain `CNAME`-equivalent resource record, and does not support apex domain HTTP forwarding. There is no ways to use a bare domain that uses Google Domains for DNS hosting with Fly.io.
+ Google Domains does not have an apex domain `CNAME`-equivalent resource record, and does not support apex domain HTTP forwarding. It is not possible to use a bare domain that uses Google Domains for DNS hosting with Fly.io.
 
 
 # Using a Subdomain
@@ -22,19 +22,17 @@ If you want your application to be a subdomain on your main domain, you'll want 
 
 ![Google Domains - Manage a domain's DNS records](./screenshots/google-domains/google-domains-manage-dns.png "Google Domains - Manage a domain's DNS records")
 
-2. Scroll down to find the "Custom resource records" section. Provide the following information in the field to create a new resource record:
+2. Scroll down to find the "Custom resource records" section. Provide the following information in the provided fields and then click "Add" to create a new resource record:
 
-**Name:** The name of the subdomain that you want your users to access your Fly Edge App with. For example "app" to access your application with `app.your-application.com`.
-**Type:** Select `CNAME`
-**TTL:** You can keep the default value.
-**Data:** This would be the domain name of your Fly Edge App. For example, `vapid-hedgehog-4710.edgeapp.net`
+- **Name:** The name of the subdomain that you want your users to access your Fly Edge App with. For example "app" to access your application with `app.your-application.com`.
+- **Type:** Select `CNAME`
+- **TTL:** You can keep the default value.
+- **Data:** This would be the domain name of your Fly Edge App. For example, `vapid-hedgehog-4710.edgeapp.net`
 
-Click "Add" to create the resource record.
-
-![Google Domains - Add CNAME record](./screenshots/google-domains/google-domains-manage-dns.png "Google Domains - Add CNAME record")
+![Google Domains - Add CNAME record](./screenshots/google-domains/google-domains-add-cname-record.png "Google Domains - Add CNAME record")
 
 3. You should now have a new `CNAME` record among your other DNS records:
 
-![Google Domains - Successfully added a CNAME record](./screenshots/google-domains/google-domains-manage-dns.png "Google Domains - Successfully added a CNAME record")
+![Google Domains - Successfully added a CNAME record](./screenshots/google-domains/google-domains-cname-record-added.png "Google Domains - Successfully added a CNAME record")
 
 Your subdomain should now be sending traffic to your Fly.io Edge App.
