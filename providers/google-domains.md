@@ -1,12 +1,13 @@
-# Google Cloud Platform Cloud DNS at a glance
+# Google Domains at a glance
 
  |   | Does | Doesn't |
  | :---: | :---: | :---: |
  | Apex `CNAME` equivalent | :heavy_check_mark: | :no_entry_sign: |
  | API Access | :heavy_check_mark:| :no_entry_sign: |
 
+ Note that Google Domains is different from the [Google Cloud Platform's Cloud DNS](./google-cloud.md) offering.
+
 # Using the Apex Domain
 
-PRs welcome while we work on documenting this!
-
 # Using a Subdomain
+
