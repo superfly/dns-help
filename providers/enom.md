@@ -5,17 +5,19 @@
  | Apex `CNAME` equivalent |  | :no_entry_sign: |
  | API Access | :heavy_check_mark:| |
 
-While [Enom indicated in the past that they supported apex domain `CNAME` records](https://www.enom.com/blog/our-new-dns-under-the-hood/), this no longer appears to be the case. Currently, wether using Enom's free or premium DNS service, you are warned when attempting to create a `CNAME` record at the apex domain:
-
-![Enom - Warning for CNAME at apex domain](./screenshots/enom/enom-cname-at-apex-domain-warning.png "Enom - Warning for CNAME at apex domain")
-
-[Documentation for DNS records at Enom](https://www.enom.com/help/faq_hostrecords.aspx) also suggest that apex domain `CNAME` records are no longer supported:
+[In the past, Enom has indicated that they supported apex domain `CNAME` records with an alias feature.](https://www.enom.com/blog/our-new-dns-under-the-hood/). At the time this Fly documentation was written, there was no public documentation that supported that blog post, however. For example, [documentation for DNS records at Enom](https://www.enom.com/help/faq_hostrecords.aspx) suggest that apex domain `CNAME` records are no longer supported:
 
 > **Restrictions**
 >
 > * A CNAME must have no other records of other types (MX, A, etc). This is very important especially with the @ record. If you specify a CNAME record type for the @ hostname, then email will not route properly for this domain name.
 
-Enom does provide two types of URL redirect records for apex domains, which you may be able to use if the drawbacks are acceptable to your scenario.
+ Currently, wether using Enom's free or premium DNS service, you are warned when attempting to create a `CNAME` record at the apex domain:
+
+![Enom - Warning for CNAME at apex domain](./screenshots/enom/enom-cname-at-apex-domain-warning.png "Enom - Warning for CNAME at apex domain")
+
+Direct communication between Fly and Enom's support channels, however, have stated that apex domain `CNAME` records will be implemented as an `ALIAS` record, but that current documentation and UI warnings are perhaps not worded in the best way to reflect this.
+
+Due to the uncertainty, Fly wouldn't recommend using Enom for apex domain `CNAME` / `ALIAS` records. As a more thoroughly documented and supported solution, Enom does provide two types of URL redirect records for apex domains, which you may be able to use if the drawbacks are acceptable to your scenario.
 
 # Using the Apex Domain
 
