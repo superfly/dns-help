@@ -1,5 +1,5 @@
 ---
-nameserver-pattern: *awsdns*
+nameserver-pattern: "*awsdns*"
 ---
 
 # AWS Route 53 at a glance

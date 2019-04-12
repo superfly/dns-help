@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@fly/edge": "^0.8.0",
+    "marked": "^0.6.2",
+    "yaml-front-matter": "^4.0.0"
+  }
+}
