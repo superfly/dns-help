@@ -5,8 +5,6 @@
  | Apex `CNAME` equivalent |  | :no_entry_sign: |
  | API Access | | :no_entry_sign: |
 
- Note that Google Domains is different from the [Google Cloud Platform's Cloud DNS](./google-cloud.md) offering.
-
  Google Domains does not offer an API to interact with DNS records.
 
 # Using the Apex Domain
