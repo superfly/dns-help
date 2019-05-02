@@ -5,44 +5,19 @@
  | Apex `CNAME` equivalent |  | :no_entry_sign: |
  | API Access | :heavy_check_mark:| |
 
-[In the past, Enom has indicated that they supported apex domain `CNAME` records with an alias feature.](https://www.enom.com/blog/our-new-dns-under-the-hood/). At the time this Fly documentation was written, there was no public documentation that supported that blog post, however. For example, [documentation for DNS records at Enom](https://www.enom.com/help/faq_hostrecords.aspx) suggest that apex domain `CNAME` records are no longer supported:
+[In the past, Enom has indicated that they supported apex domain `CNAME` records with an alias feature.](https://www.enom.com/blog/our-new-dns-under-the-hood/). However, at the time this Fly documentation was written, Enon had no public documentation that supported their older blog post. For example, [documentation for DNS records at Enom](https://www.enom.com/help/faq_hostrecords.aspx) suggests that apex domain `CNAME` records are no longer supported:
 
 > **Restrictions**
 >
 > * A CNAME must have no other records of other types (MX, A, etc). This is very important especially with the @ record. If you specify a CNAME record type for the @ hostname, then email will not route properly for this domain name.
 
- Currently, wether using Enom's free or premium DNS service, you are warned when attempting to create a `CNAME` record at the apex domain:
+Wether using Enom's free or premium DNS service, you are warned when attempting to create a `CNAME` record at the apex:
 
 ![Enom - Warning for CNAME at apex domain](./screenshots/enom/enom-cname-at-apex-domain-warning.png "Enom - Warning for CNAME at apex domain")
 
 Direct communication between Fly and Enom's support channels, however, have stated that apex domain `CNAME` records will be implemented as an `ALIAS` record, but that current documentation and UI warnings are perhaps not worded in the best way to reflect this.
 
-Due to the uncertainty, Fly wouldn't recommend using Enom for apex domain `CNAME` / `ALIAS` records. As a more thoroughly documented and supported solution, Enom does provide two types of URL redirect records for apex domains, which you may be able to use if the drawbacks are acceptable to your scenario.
-
-# Using the Apex Domain
-
-At Enom, there are two free URL redirect options that you can utilize for your apex domain: **URL redirects** and **URL frames**. A **URL redirect** causes an HTTP redirect response to be sent to your user's web browser. They are then sent to your Fly Edge App's URL which will be seen in the browser for the duration of the session with your Fly Edge App. A **URL Frame** record loads your Fly Edge App in an HTML `iframe` element, retaining your apex domain in web browsers. However, that breaks responsive design, among other things. Only you can decide if iframe embedding is acceptable for your use case, however, we'd suggest not using the URL Frame option.
-
-Also note that your users can only click or type your domain URL if it begins with `http://`. If your domain is `your-application.com`, you'll want to give out your URL as `http://your-application.com` rather than `https://your-application.com`. GoDaddy's forwarding servers do not listen for HTTPS requests. However, the URL that you forward to can be `https://`, for example your Fly Edge App's URL.
-
-### Add a URL Redirect or URL Frame Record
-
-1. To redirect your users using a domain at Enom, log in to your Enom account and look for the domain that you want to use with a Fly Edge Application. If Enom is the service being used to host your DNS zone, you'll find the domain under the "DNS hosted" link: 
-
-![Enom - Manage DNS Records for your Domain](./screenshots/enom/enom-basic-dns-records.png "Enom - Manage DNS Records for your Domain")
-
-2. Look for any pre-existing `A`,`AAAA`, `CNAME`, `URL Frame` or `URL Redirect` record with a "Host Name" value of `@` and delete it. Note that by default Enom will create a blank record for `@`. As long as there is no value in the "Address" field of an existing record for `@`, then you can continue.
-
-![Enom - Manage DNS Records for your Domain](./screenshots/enom/enom-delete-old-apex-record.png "Enom - Manage DNS Records for your Domain")
-
-3. Begin editing the row that Enom creates by default for `@`: 
-
-  * Select either a `URL Redirect` or `URL Frame` record from the "Record Type" drop down menu.
-  * The "Address" section would be where your application resides at Fly. For example, `vapid-hedgehog-4710.edgeapp.net`.
-  * Save your changes, and rock on with your Fly Edge App!
-
-![Enom - Create a URL redirect record for your Domain](./screenshots/enom/enom-url-redirect-record.png "Enom - Create a URL redirect record for your Domain")
-
+Due to the uncertainty, Fly wouldn't recommend using Enom for apex domain `CNAME` / `ALIAS` records. If you do choose to use Enom, contact us and let us know what your experience is.
 
 # Using a Subdomain
 

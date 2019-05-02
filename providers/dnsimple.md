@@ -33,9 +33,7 @@ To create a new `ALIAS` record for your apex domain, log in to your DNSimple acc
 
 ## `URL` Records
 
-DNSimple also has support for HTTP redirects with [`URL` Records](https://support.dnsimple.com/articles/url-record/). While handy, we'd recommend that you instead use DNSimple's `ALIAS` record to redirect your application to Fly via DNS, rather than with HTTP redirects. DNSimple `URL` resource records force your clients to move up and down the network stack from DNS to HTTP at DNSimple before then moving to Fly where they once again moving through the network stack to finally reach your application. I would be more performant, and reduce the moving parts to simply use an `ALIAS` record.
-
-However, you know your needs better than we do. If you find that the `URL` record better suits your situation, let us know about it! Drop us a note at [support@fly.io](mailto:support@fly.io) or [chat with us on Gitter](https://gitter.im/superfly/fly).
+DNSimple also offers a HTTP redirect option with [`URL` Records](https://support.dnsimple.com/articles/url-record/). However, this would _not_ be the record type that you'd want to use with a Fly Edge App. Instead, use the `ALIAS` record above.
 
 # Using a Subdomain
 

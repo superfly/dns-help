@@ -5,46 +5,13 @@
  | Apex `CNAME` equivalent | | :no_entry_sign: |
  | API Access | :heavy_check_mark:| |
 
-GoDaddy does not provide a `CNAME`-equivalent resource record for apex domains. However, GoDaddy does provide free HTTP forwarding or proxying for your domain and its subdomains. Before you proceed, you'll want to assess some downsides.
+GoDaddy does not provide a `CNAME`-equivalent resource record for apex domains. 
 
 If the downsides mentioned below are a bit too much for you, we suggest taking a look at our [list of preferred DNS hosts](https://github.com/superfly/dns-help#preferred).
 
-##  GoDaddy Forwarding
+##  GoDaddy Forwarding Options
 
-When forwarding a domain that has its DNS zone hosted at GoDaddy, you'll want to consider the following:
-
-* Your users can only click or type your domain URL if it begins with `http://`. If your domain is `your-application.com`, you'll want to give out your URL as `http://your-application.com` rather than `https://your-application.com`. GoDaddy's forwarding servers do not listen for HTTPS requests. However, the URL that you forward to can be `https://`, for example your Fly Edge App's URL.
-* Your users will not see your domain in their browser's URL bar. They will ultimately see your Fly.io Edge Application's URL. For example, `https://vapid-hedgehog-4710.edgeapp.net`. This may be an inconsistent and confusing experience.
-
-## GoDaddy "Forward with Masking"
-
-When using the "Forward with Masking" option for a domain that has its DNS zone hosted at GoDaddy, your Fly Edge App is loaded in an `iframe` element, retaining your apex domain in web browsers. However, that breaks responsive design, among other things. Only you can decide if iframe embedding is acceptable for your use case, however, we'd suggest not using the "Forward with Masking" option.
-
-* You're adding another depdendency layer to the loading of your application.
-* The URL that your users access will be delivered over HTTP since GoDaddy doesn't listen for HTTPS requests. This means that the traffic from GoDaddy to your users will be unsecure. Note that the traffic from GoDaddy to your Fly.io Edge Application (e.g. `https://vapid-hedgehog-4710.edgeapp.net`) _will_ be, however the chain of security between users and the application has been broken.
-
-# Using the Apex Domain
-
-These are the steps to use GoDaddy forwarding or forwarding with masking for your apex domain:
-
-1. Log in to your GoDaddy account and look for the domain that you want to use with a Fly Edge Application. Once you've found it, click the "DNS" button:
-
-![GoDaddy - Manage DNS Records for your Domain](./screenshots/godaddy/godaddy-select-dns.png "GoDaddy - Manage DNS Records for your Domain")
-
-2. On the DNS Management page, look for the "Forwarding" section. Click "Add" next to the "Domain" sub-section:
-
-![GoDaddy - Modify Apex Forwarding](./screenshots/godaddy/godaddy-add-forwarding.png "GoDaddy - Modify Apex Forwarding")
-
-3. Modify your forwarding settings:
-  * Under "Forward To:" choose "https://" and then type the URL of your Fly.io edge application.
-  * [Check GoDaddy's documentation for more information on 301 vs 302 redirects, and forwarding vs masking](https://www.godaddy.com/help/manually-forwarding-or-masking-your-domain-or-subdomain-422). Our suggestion is to use 301 redirects.
-  * Choose "Forward Only" or "Forward with Masking" based on your assessment of the cons mentioned above.
-  * If you choose "Forward with Masking" you'll need to supply some additional information concerning Site Title, Description, and Keywords.
-  * Choose "Update my nameservers and DNS settings to support this change."
-  * Save your settings!
-![GoDaddy - Modify Forwarding Options](./screenshots/godaddy/godaddy-domain-forward-options.png "GoDaddy - Modify Forwarding Options")
-
-You should be all set! It may take a few minutes, but depending on the forward option you chose, your domain should either redirect to your Fly Edge App URL or proxy your Fly Edge App within a few minutes.
+GoDaddy has "Forwarding" and "Forwarding with Masking" options for your bare domain. This is accomplished with HTTP redirects and iframes, respectively. We don't recommend this as a pattern for using your domain apex with a Fly Edge App. Check out our [list of preferred DNS hosts](https://github.com/superfly/dns-help#preferred).
 
 # Using a Subdomain
 
