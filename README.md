@@ -7,11 +7,11 @@ Throughout this document, when we want to use an example domain we'll just say `
 The following instructions help you set up all the magic.
 
 # DNS Provider Instructions
-We'd love to know which companies people are using to host their DNS zones. If you don't see your DNS provider below, [submit a PR](https://help.github.com/articles/creating-a-pull-request/) to add your preferred DNS provider to the list! If it's already there, show it some love by pasting a 👍 next to it! If the following instructions don't seem to be working for you, or you have other questions, let us know: [Tweet at us](https://twitter.com/flydotio), [email us](mailto:support@fly.io), or [ask us in real time on Gitter](https://gitter.im/superfly/fly).
+We'd love to know which companies people are using to host their DNS zones. If you don't see your DNS provider below, [submit a PR](https://help.github.com/articles/creating-a-pull-request/) to add it to the list! If it's already there, show it some love by pasting a 👍 next to it! If the following instructions don't seem to be working for you, or you have other questions, let us know: [Tweet at us](https://twitter.com/flydotio), [email us](mailto:support@fly.io), or [ask us in real time on Gitter](https://gitter.im/superfly/fly).
 
-At Fly, we tend to divide DNS providers into two categories: **Preferred** and **Unsupported**. Preferred DNS providers offer a `CNAME`-like resource record at a zone's apex. In other words, you can forward DNS queries for `your-application.com` to another DNS name, like `this.other-domain.com`. Unsupported DNS providers don't offer that option, or the option isn't easy to implement and requires the use of other service and some coding to make work.
+At Fly, we tend to divide DNS providers into two categories: **Preferred** and **Unsupported**. Preferred DNS providers offer a `CNAME`-like resource record at a zone's apex. In other words, you can respond to queries for `your-application.com` with another DNS name, like `this.other-domain.com`. Unsupported DNS providers don't offer that option, or the option just doesn't provide a great experience. For example, many providers will offer HTTP redirection for your apex domain (but not HTTPS redirection) or an iframe redirect. Neither of those work great for real world web applications.
 
-We're still working on making this a complete list, but here's the current providers list:
+We're still working on making this a complete list, but here's the current providers that we often encounter:
 
 ## Preferred:
 - [Cloudflare](providers/cloudflare.md) 👍
@@ -51,13 +51,15 @@ You went to the expense of buying a domain name for your application, and now yo
 
 A domain apex, (AKA "Naked Domain" or "Bare Domain") is referring to a domain without any subdomains. E.g. `your-application.com` is the domain apex, whereas `www.your-domain.com` would be referring to a subdomain (`www`). To use your domain apex, here are three high level tidbits of information that you should have in mind:
 
-**First,** know that you may not be able to use your current DNS provider to use your bare domain to access your Fly application. Or, if it _is_ possible, you may have some extra hoops to jump through at your DNS provider (for example, if you use [Amazon's Route 53](providers/aws-route-53.md)).
+**First,** know that no matter what, we'll help you get your bare domain pointing to your Fly application. However you may not be able to use your current DNS provider. Fortunately, changing DNS providers is pretty simple and doesn't cause any downtime.
 
-**Second,** you'll want to create a `CNAME`-equivalent DNS resource record at your domain apex (e.g. `your-application.com`) that sends DNS query traffic to the DNS name that Fly.io gave you for your Edge App. That Fly.io URL will end in `edgeapp.net`, for example `vapid-hedgehog-4710.edgeapp.net`.
+**Second,** you'll want to create a `CNAME`-equivalent DNS resource record at your domain apex (e.g. `your-application.com`) that responds to queries with the DNS name that Fly.io gave you for your Edge App. That Fly.io DNS name will end in `edgeapp.net`, for example `vapid-hedgehog-4710.edgeapp.net`.
 
-**Third,** after your users' DNS query resolves properly, Fly.io's edge servers then receive your users' HTTP traffic and serves your Fly Edge App to your customers using your domain name.
+**Third,** once everything is in place, your users' DNS queries ultimately resolve to bring them to Fly.io's edge servers. That's where Fly receives your users' HTTP traffic and serves your Fly Edge App to your customers using your domain name.
 
-With the above principles in mind, you may be able to figure out how to create the needed resources at your DNS provider even if they're not listed above, or aren't a preferred provider.
+With the above principles in mind, you may be able to figure out how to create the needed records at your DNS provider even if they're not listed above, or aren't a preferred provider.
+
+## Why is it Such a Problem to Use a Bare Domain Anyway?!
 
 Ultimately, the trouble with using a bare domain is:
 
