@@ -27,17 +27,17 @@ We're still working on making this a complete list, but here's the current provi
 - [TheNames.uk](providers/thenames.md) (AKA names.co.uk)
 
 ## Still Being Investigated:
-- [Digital Ocean](providers/digital-ocean.md) 👍
-- [DreamHost](providers/dreamhost.md)
-- [Freenom](providers/freenom.md) 👍👍👍
-- [Gandi](providers/gandi.md)
-- [Google Cloud Platform Cloud DNS](providers/google-cloud.md)
-- [Hover](providers/hover.md)
-- [iwantmyname](providers/iwantmyname.md)
-- [Linode](providers/linode.md)
-- [Name.com](providers/name.md)
-- [Netlify](providers/netlify.md) 👍👍
-- [NS1](providers/ns1.md)
+- [Digital Ocean](providers/draft/digital-ocean.md) 👍
+- [DreamHost](providers/draft/dreamhost.md)
+- [Freenom](providers/draft/freenom.md) 👍👍👍
+- [Gandi](providers/draft/gandi.md)
+- [Google Cloud Platform Cloud DNS](providers/draft/google-cloud.md)
+- [Hover](providers/draft/hover.md)
+- [iwantmyname](providers/draft/iwantmyname.md)
+- [Linode](providers/draft/linode.md)
+- [Name.com](providers/draft/name.md)
+- [Netlify](providers/draft/netlify.md) 👍👍
+- [NS1](providers/draft/nsone.md)
 
 ### DNS Documentation Help
 
