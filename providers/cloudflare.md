@@ -1,3 +1,7 @@
+---
+nameserver-pattern: `*.ns.cloudflare.com`
+---
+
 # Cloudflare at a glance
 
  |   | Does | Doesn't |
