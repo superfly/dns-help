@@ -1,3 +1,7 @@
+---
+nameserver-pattern: `dns*.registrar-servers.com`
+---
+
 # Namecheap  at a glance
 
  |   | Does | Doesn't |

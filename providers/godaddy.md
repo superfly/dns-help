@@ -1,3 +1,7 @@
+---
+nameserver-patterns: `ns*.domaincontrol.com`
+---
+
 # GoDaddy at a glance
 
  |   | Does | Doesn't |

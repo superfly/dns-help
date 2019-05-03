@@ -1,3 +1,7 @@
+---
+nameserver-pattern: `*.googledomains.com`
+---
+
 # Google Domains at a glance
 
  |   | Does | Doesn't |

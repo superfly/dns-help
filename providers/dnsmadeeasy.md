@@ -1,3 +1,7 @@
+---
+nameserver-pattern: `*.dnsmadeeasy.com`
+---
+
 # DNS Made Easy at a glance
 
  |   | Does | Doesn't |

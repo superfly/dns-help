@@ -1,3 +1,7 @@
+---
+nameserver-pattern: `dns*.name-services.com`
+---
+
 # Enom at a glance
 
  |   | Does | Doesn't |
