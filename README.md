@@ -24,6 +24,7 @@ We're still working on making this a complete list, but here's the current provi
 - [Google Domains](providers/google-domains.md)
 - [Enom](providers/enom.md)
 - [GoDaddy](providers/godaddy.md)
+- [Linode](providers/linode.md)
 - [NameCheap](providers/namecheap.md) 👍👍
 - [TheNames.uk](providers/thenames.md) (AKA names.co.uk)
 
@@ -35,7 +36,6 @@ We're still working on making this a complete list, but here's the current provi
 - [Google Cloud Platform Cloud DNS](providers/draft/google-cloud.md)
 - [Hover](providers/draft/hover.md)
 - [iwantmyname](providers/draft/iwantmyname.md)
-- [Linode](providers/draft/linode.md)
 - [Name.com](providers/draft/name.md)
 - [Netlify](providers/draft/netlify.md) 👍👍
 - [Rage4](/providers/draft/rage4.md)
