@@ -28,7 +28,7 @@ We're still working on making this a complete list, but here's the current provi
 - [GoDaddy](providers/godaddy.md)
 - [Linode](providers/linode.md)
 - [NameCheap](providers/namecheap.md) 👍👍
-- [TheNames.uk](providers/thenames.md) (AKA names.co.uk)
+- [TheNames.uk](providers/draft/thenames.md) (AKA names.co.uk)
 
 ## Still Being Investigated:
 - [Digital Ocean](providers/draft/digital-ocean.md) 👍
