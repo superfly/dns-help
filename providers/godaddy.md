@@ -5,13 +5,7 @@
  | Apex `CNAME` equivalent | | :no_entry_sign: |
  | API Access | :heavy_check_mark:| |
 
-GoDaddy does not provide a `CNAME`-equivalent resource record for apex domains. 
-
-If the downsides mentioned below are a bit too much for you, we suggest taking a look at our [list of preferred DNS hosts](https://github.com/superfly/dns-help#preferred).
-
-##  GoDaddy Forwarding Options
-
-GoDaddy has "Forwarding" and "Forwarding with Masking" options for your bare domain. This is accomplished with HTTP redirects and iframes, respectively. We don't recommend this as a pattern for using your domain apex with a Fly Edge App. Check out our [list of preferred DNS hosts](https://github.com/superfly/dns-help#preferred).
+GoDaddy does not provide a `CNAME`-equivalent resource record for apex domains. Check out our [list of preferred DNS hosts](https://github.com/superfly/dns-help#preferred).
 
 # Using a Subdomain
 
