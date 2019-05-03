@@ -17,6 +17,7 @@ We're still working on making this a complete list, but here's the current provi
 - [Cloudflare](providers/cloudflare.md) 👍
 - [DNSimple](providers/dnsimple.md)
 - [DNSMadeEasy](providers/dnsmadeeasy.md)
+- [NS1](providers/nsone.md)
 
 ## Unsupported:
 - [AWS Route 53](providers/aws-route-53.md)  👍
@@ -37,7 +38,6 @@ We're still working on making this a complete list, but here's the current provi
 - [Linode](providers/draft/linode.md)
 - [Name.com](providers/draft/name.md)
 - [Netlify](providers/draft/netlify.md) 👍👍
-- [NS1](providers/draft/nsone.md)
 
 ### DNS Documentation Help
 
