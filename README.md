@@ -18,11 +18,13 @@ We're still working on making this a complete list, but here's the current provi
 - [DNSimple](providers/dnsimple.md)
 - [DNSMadeEasy](providers/dnsmadeeasy.md)
 - [NS1](providers/nsone.md)
+- [Rage4](/providers/draft/rage4.md)
 
 ## Unsupported:
 - [AWS Route 53](providers/aws-route-53.md)  👍
 - [Google Domains](providers/google-domains.md)
 - [Enom](providers/enom.md)
+- [Freenom](providers/draft/freenom.md) 👍👍👍
 - [GoDaddy](providers/godaddy.md)
 - [Linode](providers/linode.md)
 - [NameCheap](providers/namecheap.md) 👍👍
@@ -31,14 +33,12 @@ We're still working on making this a complete list, but here's the current provi
 ## Still Being Investigated:
 - [Digital Ocean](providers/draft/digital-ocean.md) 👍
 - [DreamHost](providers/draft/dreamhost.md)
-- [Freenom](providers/draft/freenom.md) 👍👍👍
 - [Gandi](providers/draft/gandi.md)
 - [Google Cloud Platform Cloud DNS](providers/draft/google-cloud.md)
 - [Hover](providers/draft/hover.md)
 - [iwantmyname](providers/draft/iwantmyname.md)
 - [Name.com](providers/draft/name.md)
 - [Netlify](providers/draft/netlify.md) 👍👍
-- [Rage4](/providers/draft/rage4.md)
 
 ### DNS Documentation Help
 
