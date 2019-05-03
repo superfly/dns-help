@@ -38,6 +38,7 @@ We're still working on making this a complete list, but here's the current provi
 - [Linode](providers/draft/linode.md)
 - [Name.com](providers/draft/name.md)
 - [Netlify](providers/draft/netlify.md) 👍👍
+- [Rage4](/providers/draft/rage4.md)
 
 ### DNS Documentation Help
 
