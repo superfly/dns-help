@@ -14,14 +14,14 @@ At Fly, we tend to divide DNS providers into two categories: **Preferred** and *
 We're still working on making this a complete list, but here's the current providers that we often encounter:
 
 ## Preferred:
-- [Cloudflare](providers/cloudflare.md) 👍
+- [Cloudflare](providers/cloudflare.md) 👍👍
 - [DNSimple](providers/dnsimple.md)
 - [DNSMadeEasy](providers/dnsmadeeasy.md)
 - [NS1](providers/nsone.md)
 - [Rage4](/providers/draft/rage4.md)
 
 ## Unsupported:
-- [AWS Route 53](providers/aws-route-53.md)  👍
+- [AWS Route 53](providers/aws-route-53.md)  👍👍
 - [Google Domains](providers/google-domains.md)
 - [Enom](providers/enom.md)
 - [Freenom](providers/draft/freenom.md) 👍👍👍
@@ -39,6 +39,7 @@ We're still working on making this a complete list, but here's the current provi
 - [iwantmyname](providers/draft/iwantmyname.md)
 - [Name.com](providers/draft/name.md)
 - [Netlify](providers/draft/netlify.md) 👍👍
+- [Porkbun](providers/draft/porkbun.md) 👍
 
 ### DNS Documentation Help
 
